@@ -82,5 +82,6 @@ module.exports = {
 
         'react': 'React',
         'react-dom': 'ReactDOM',
+        'js-cookie': 'Cookies'
     }
 };

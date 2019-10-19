@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "module": "esNext",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "outDir": "dist",
+        "lib": [
+            "es2018",
+            "dom",
+            "dom.iterable"
+        ],
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "disableSizeLimit": true,
+        "downlevelIteration": true,
+        "noErrorTruncation": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": true,
+        "jsx": "react"
+    },
+    "exclude": [
+        "src/frontend" // will be builded separately.
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "useCache": true,
+        "useTranspileModule": true
+    }
+}

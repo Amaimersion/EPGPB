@@ -1,0 +1,45 @@
+block mixins
+  mixin css(href)
+    link(
+      rel="stylesheet"
+      href=href
+    )&attributes(attributes)
+
+  mixin js(src, props={})
+    script(
+      defer=props.defer
+      async=props.async
+      src=src
+    )&attributes(attributes)
+
+  mixin js-defer(src)
+    +js(
+      src,
+      {defer: true}
+    )&attributes(attributes)
+
+  mixin js-async(src)
+    +js(
+      src,
+      {async: true}
+    )&attributes(attributes)
+
+
+<!DOCTYPE html>
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title="Единый портал государственной поддержки бизнеса"
+    +css("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css")
+    +css("https://fonts.googleapis.com/icon?family=Material+Icons")
+    +css("index.css")
+    +js-async("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js")
+    +js-defer("https://unpkg.com/react@16/umd/react.development.js")
+    +js-defer("https://unpkg.com/react-dom@16/umd/react-dom.development.js")
+    +js-defer("index.js")
+
+  body
+    div(id="root")

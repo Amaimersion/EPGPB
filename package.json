@@ -1,0 +1,52 @@
+{
+    "name": "pgpb",
+    "version": "1.0.0",
+    "description": "Портал государственной поддержки бизнеса (задача на хакатоне 'DataAudit').",
+    "scripts": {
+        "start": "node dist/server",
+        "build": "yarn run build-frontend && yarn run build-backend",
+        "build-frontend": "webpack --config src/frontend/webpack.config",
+        "watch-frontend": "webpack --config src/frontend/webpack.config --watch",
+        "build-backend": "tsc --p tsconfig.backend.json"
+    },
+    "engines": {
+        "node": ">=10.0.0",
+        "yarn": ">=1.15.0"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.17.0",
+        "@types/compression": "0.0.36",
+        "@types/copy-webpack-plugin": "^5.0.0",
+        "@types/express": "^4.16.0",
+        "@types/helmet": "0.0.38",
+        "@types/lusca": "^1.5.0",
+        "@types/morgan": "^1.7.35",
+        "@types/react": "^16.9.9",
+        "@types/react-dom": "^16.9.2",
+        "@types/serve-favicon": "^2.2.31"
+    },
+    "dependencies": {
+        "awesome-typescript-loader": "^5.2.0",
+        "compression": "^1.7.3",
+        "copy-webpack-plugin": "^5.0.4",
+        "css-loader": "^1.0.0",
+        "express": "^4.16.3",
+        "express-validator": "^5.2.0",
+        "helmet": "^3.12.1",
+        "html-webpack-plugin": "^3.2.0",
+        "lusca": "^1.6.0",
+        "mini-css-extract-plugin": "^0.4.1",
+        "morgan": "^1.9.0",
+        "node-sass": "^4.9.2",
+        "pug": "^2.0.3",
+        "pug-loader": "^2.4.0",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2",
+        "remove-files-webpack-plugin": "^1.0.0",
+        "sass-loader": "^7.0.3",
+        "serve-favicon": "^2.5.0",
+        "typescript": "^2.9.2",
+        "webpack": "^4.16.0",
+        "webpack-cli": "^3.0.8"
+    }
+}

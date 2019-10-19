@@ -1,0 +1,15 @@
+extends ./_common/html5
+
+
+block append head
+  +css(cssLib.materialize)
+  +css(icons.materialize)
+  +css("main.css")
+  +js-async(jsLib.materialize)
+  +js-defer(jsLib.react)
+  +js-defer(jsLib.reactDom)
+  +js-defer("main.js")
+
+
+block append body
+  div(id="root")

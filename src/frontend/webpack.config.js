@@ -11,7 +11,7 @@ const OUTPUT_FOLDER = path.resolve(OUTPUT_DIR, 'dist');
 
 module.exports = {
     entry: {
-        index: path.resolve(__dirname, 'src/build/index.js')
+        main: path.resolve(__dirname, 'src/build/main.js')
     },
     output: {
         path: OUTPUT_FOLDER
@@ -58,8 +58,8 @@ module.exports = {
             filename: '[name].css'
         }),
         new HTMLWebpackPlugin({
-            filename: 'index.html',
-            template: path.resolve(__dirname, './src/pug/index.pug'),
+            filename: 'main.html',
+            template: path.resolve(__dirname, './src/pug/main.pug'),
             inject: false
         })
     ],

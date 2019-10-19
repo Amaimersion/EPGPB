@@ -1,0 +1,82 @@
+body,
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.custom-main-app {
+  width: 100%;
+  height: 100%;
+  background-color: #F4F5F7;
+}
+
+.custom-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+.custom-main-authorization {
+  background-color: white;
+  height: auto;
+  border-radius: 7px;
+  padding: 2rem 10rem;
+  box-sizing: border-box;
+
+  &-container {
+
+  }
+
+  &-or {
+    position: relative;
+    height: 1.2rem;
+    line-height: 1.2rem;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border-top: 1px solid #D6DADE;
+      content: "";
+      display: block;
+      width: 100%;
+    }
+
+    > span {
+      background-color: white;
+      display: inline-block;
+      padding: 0 1rem;
+      position: relative;
+    }
+  }
+
+  &-gosuslugi {
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    &-button {
+      font-weight: bold;
+      border: 1px solid #E2E2E2;
+      border-radius: 7px;
+      padding: .3rem 1.5rem;
+      cursor: pointer;
+
+      > span {
+        &:first-child {
+          color: red;
+        }
+
+        &:last-child {
+          color: blue;
+        }
+      }
+    }
+  }
+}

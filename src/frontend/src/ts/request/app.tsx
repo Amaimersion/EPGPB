@@ -74,11 +74,6 @@ class App extends React.Component<Props, State> {
                             <div className={cssMaterialize.progress}>
                                 <div className={cssMaterialize.indeterminate} />
                             </div>
-                            <div
-                                className={cssMaterialize.progress}
-                            >
-                                <div className={cssMaterialize.determinate} />
-                            </div>
                         </div>
                     </div>
 

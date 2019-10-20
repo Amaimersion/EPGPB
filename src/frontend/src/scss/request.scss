@@ -31,17 +31,7 @@
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      width: 13%;
-    }
-
-    &:nth-child(3) {
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      width: 10%;
-
-      > .determinate {
-        width: 0;
-      }
+      width: 23%;
     }
   }
 }

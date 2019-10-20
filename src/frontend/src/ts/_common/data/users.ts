@@ -7,8 +7,8 @@ export default abstract class Users {
             name: "Неавторизованный пользователь"
         },
         {
-            login: "",
-            password: "",
+            login: "pred",
+            password: "pred",
             accessLevel: 1,
             name: "Предприниматель"
         },

@@ -112,7 +112,7 @@ export default class Authorization extends React.Component<Props, State> {
         );
 
         if (successSignIn) {
-            window.location.replace(`${window.location.origin}/index.html`);
+            window.location.replace(`${window.location.origin}/request.html`);
         } else {
             alert("Неверный логин или пароль.");
         }

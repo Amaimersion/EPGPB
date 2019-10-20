@@ -69,6 +69,18 @@ app.get("/request.js", (_req, res) => {
     res.sendFile("request.js", {root: __dirname});
 });
 
+app.get("/stat.html", (_req, res) => {
+    res.sendFile("stat.html", {root: __dirname});
+});
+
+app.get("/stat.css", (_req, res) => {
+    res.sendFile("stat.css", {root: __dirname});
+});
+
+app.get("/stat.js", (_req, res) => {
+    res.sendFile("stat.js", {root: __dirname});
+});
+
 // end stubs.
 
 

@@ -1,0 +1,17 @@
+extends ./_common/html5
+
+
+block append head
+  +css(cssLib.materialize)
+  +css(cssLib.chart)
+  +css("stat.css")
+  +js-defer(jsLib.materialize)
+  +js-defer(jsLib.chart)
+  +js-defer(jsLib.react)
+  +js-defer(jsLib.reactDom)
+  +js-defer(jsLib.cookie)
+  +js-defer("stat.js")
+
+
+block append main
+  main(id="root")

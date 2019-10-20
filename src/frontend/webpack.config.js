@@ -14,6 +14,7 @@ module.exports = {
         index: path.resolve(__dirname, 'src/build/index.js'),
         access: path.resolve(__dirname, 'src/build/access.js'),
         request: path.resolve(__dirname, 'src/build/request.js'),
+        stat: path.resolve(__dirname, 'src/build/stat.js')
     },
     output: {
         path: OUTPUT_FOLDER
@@ -74,6 +75,11 @@ module.exports = {
             template: path.resolve(__dirname, './src/pug/request.pug'),
             inject: false
         }),
+        new HTMLWebpackPlugin({
+            filename: 'stat.html',
+            template: path.resolve(__dirname, './src/pug/stat.pug'),
+            inject: false
+        }),
     ],
     resolve: {
         alias: {
@@ -94,6 +100,7 @@ module.exports = {
 
         'react': 'React',
         'react-dom': 'ReactDOM',
-        'js-cookie': 'Cookies'
+        'js-cookie': 'Cookies',
+        'chart.js': 'Chart'
     }
 };

@@ -34,10 +34,13 @@ class App extends React.Component<Props, State> {
                     <p
                         className={css.user.title}
                     >
-                        {"Предприниматель"}
+                        {User.currentName() || "?"}
                     </p>
 
-                    <i className={`${cssMaterialize.materialIcon} ${css.user.icon}`}>
+                    <i
+                        className={`${cssMaterialize.materialIcon} ${css.user.icon}`}
+                        onClick={this.signOut}
+                    >
                         {"exit_to_app"}
                     </i>
                 </div>
@@ -260,6 +263,11 @@ class App extends React.Component<Props, State> {
                 </div>
             </div>
         );
+    }
+
+    public signOut(): void {
+        User.signOut();
+        window.location.replace(`${window.location.origin}/index.html`);
     }
 }
 

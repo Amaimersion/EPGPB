@@ -3,6 +3,10 @@ import Users from "../../_common/data/users";
 
 
 export default abstract class User {
+    public static currentName() {
+        return Cookies.get("userName");
+    }
+
     public static currentAccessLevel(): number {
         const level = Cookies.get("userAccessLevel");
 
@@ -33,5 +37,10 @@ export default abstract class User {
         }
 
         return status;
+    }
+
+    public static signOut(): void {
+        Cookies.set("userAccessLevel", "");
+        Cookies.set("userName", "");
     }
 }

@@ -9,6 +9,7 @@ interface Props {
         title: string;
         checked: boolean;
     }>;
+    dateOfCompletition?: string;
     status?: "pending" | "cancel" | "ready";
 }
 
@@ -74,6 +75,16 @@ export default class Stage extends React.Component<Props, State> {
                                 </i>
                             )
                         )
+                    }
+
+                    {
+                        this.props.dateOfCompletition ?
+                        <p
+                            className={css.dateOfCompletition}
+                        >
+                            {this.props.dateOfCompletition}
+                        </p> :
+                        null
                     }
                 </div>
             </div>

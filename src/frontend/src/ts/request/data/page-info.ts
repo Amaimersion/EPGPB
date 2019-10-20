@@ -18,7 +18,8 @@ export default abstract class PageInfo {
             check: "custom-request-stage-check",
             deny: "custom-request-stage-deny",
             pending: "custom-request-stage-pending",
-            description: "custom-request-description"
+            description: "custom-request-description",
+            dateOfCompletition: "custom-request-stage-date-of-completition"
         },
         description: {
             name: "custom-request-description-name",

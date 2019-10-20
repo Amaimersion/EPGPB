@@ -100,6 +100,7 @@ class App extends React.Component<Props, State> {
                                     }
                                 ]}
                                 status={"ready"}
+                                dateOfCompletition={"13.10.2019"}
                             /> :
                             null
                         }
@@ -119,6 +120,7 @@ class App extends React.Component<Props, State> {
                                     }
                                 ]}
                                 status={"pending"}
+                                dateOfCompletition={"03.11.2019"}
                             /> :
                             null
                         }
@@ -142,6 +144,7 @@ class App extends React.Component<Props, State> {
                                     }
                                 ]}
                                 status={"ready"}
+                                dateOfCompletition={"05.11.2019"}
                             /> :
                             null
                         }
@@ -161,6 +164,7 @@ class App extends React.Component<Props, State> {
                                     }
                                 ]}
                                 status={"ready"}
+                                dateOfCompletition={"20.11.2019"}
                             /> :
                             null
                         }
@@ -180,6 +184,7 @@ class App extends React.Component<Props, State> {
                                     }
                                 ]}
                                 status={"ready"}
+                                dateOfCompletition={"29.11.2019"}
                             /> :
                             null
                         }
@@ -199,6 +204,7 @@ class App extends React.Component<Props, State> {
                                     }
                                 ]}
                                 status={"ready"}
+                                dateOfCompletition={"05.12.2019"}
                             /> :
                             null
                         }
@@ -218,6 +224,7 @@ class App extends React.Component<Props, State> {
                                     }
                                 ]}
                                 status={"cancel"}
+                                dateOfCompletition={"07.12.2019"}
                             /> :
                             null
                         }

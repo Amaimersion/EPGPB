@@ -41,6 +41,30 @@ app.get("/index.js", (_req, res) => {
     res.sendFile("index.js", {root: __dirname});
 });
 
+app.get("/access.html", (_req, res) => {
+    res.sendFile("access.html", {root: __dirname});
+});
+
+app.get("/access.css", (_req, res) => {
+    res.sendFile("access.css", {root: __dirname});
+});
+
+app.get("/access.js", (_req, res) => {
+    res.sendFile("access.js", {root: __dirname});
+});
+
+app.get("/request.html", (_req, res) => {
+    res.sendFile("request.html", {root: __dirname});
+});
+
+app.get("/request.css", (_req, res) => {
+    res.sendFile("request.css", {root: __dirname});
+});
+
+app.get("/request.js", (_req, res) => {
+    res.sendFile("request.js", {root: __dirname});
+});
+
 // end stubs.
 
 

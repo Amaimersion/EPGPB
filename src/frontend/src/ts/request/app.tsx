@@ -30,6 +30,10 @@ class App extends React.Component<Props, State> {
                 className={css.root}
             >
                 <div
+                    className={css.logo}
+                />
+
+                <div
                     className={css.user.root}
                 >
                     <p
@@ -52,12 +56,14 @@ class App extends React.Component<Props, State> {
                     <div
                         className={cssMaterialize.row}
                     >
-                        <h3>
+                        <h4
+                            style={{textTransform: "uppercase"}}
+                        >
                             {"Заявка № 1"}
-                        </h3>
-                        <h4>
-                            {`Получение государственной гарантии на реализацию проекта "Организация комплекса рыбодобычи с последующей переработкой в ЯНАО на Карском море"`}
                         </h4>
+                        <h5>
+                            {`Получение государственной гарантии на реализацию проекта "Организация комплекса рыбодобычи с последующей переработкой в ЯНАО на Карском море"`}
+                        </h5>
                     </div>
 
                     <div

@@ -34,6 +34,7 @@ export default abstract class PageInfo {
             root: "custom-request-user",
             title: "custom-request-user-title",
             icon: "custom-request-user-icon"
-        }
+        },
+        logo: "custom-request-logo"
     };
 }

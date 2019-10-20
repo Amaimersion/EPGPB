@@ -1,12 +1,21 @@
 @import "./_common/font";
 
 
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #FbFbFb;
+}
+
+
 .custom-request-container {
   padding: .5rem 2rem;
   margin: 0 5rem;
   margin-top: 5rem;
   box-sizing: border-box;
   border-radius: 7px;
+  background-color: white;
 }
 
 
@@ -42,6 +51,7 @@
   justify-content: space-between;
   align-items: flex-start;
   align-content: center;
+  height: 16rem;
 
   > * {
     margin-right: 2rem;
@@ -56,6 +66,12 @@
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 7px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 
   &-container {
     display: flex;
@@ -64,6 +80,8 @@
     align-items: center;
     align-content: center;
     text-align: center;
+    height: 100%;
+    width: 100%;
   }
 
   &-title {
@@ -147,7 +165,7 @@
 
 .custom-request-user {
   position: absolute;
-  right: 2rem;
+  right: 4.5rem;
   top: .5rem;
   display: flex;
   justify-content: center;
@@ -168,4 +186,16 @@
 .custom-request-stage-date-of-completition {
   margin-bottom: 0;
   font-weight: bold;
+}
+
+
+.custom-request-logo {
+  background-image: url("https://vmasshtabe.ru/wp-content/uploads/2015/12/329155-vms-Gerb-Rossii.png");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: .5rem;
+  left: 4.5rem;
+  height: 5rem;
+  width: 5rem;
 }

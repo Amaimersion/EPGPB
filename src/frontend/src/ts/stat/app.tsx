@@ -157,7 +157,7 @@ class App extends React.Component<Props, State> {
                 >
                     <Canvas
                         reff={this.elements.c14}
-                        create={this.create13}
+                        create={this.create14}
                     />
                     <Canvas
                         reff={this.elements.c15}

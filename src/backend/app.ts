@@ -33,6 +33,10 @@ app.get("/", (_req, res) => {
 
 // stubs.
 
+app.get("/index.html", (_req, res) => {
+    res.sendFile("index.html", {root: __dirname});
+});
+
 app.get("/index.css", (_req, res) => {
     res.sendFile("index.css", {root: __dirname});
 });

@@ -9,7 +9,7 @@ interface Props {
         title: string;
         checked: boolean;
     }>;
-    checked?: boolean;
+    status?: "pending" | "cancel" | "ready";
 }
 
 interface State {}
@@ -51,19 +51,29 @@ export default class Stage extends React.Component<Props, State> {
                     </div>
 
                     {
-                        typeof this.props.checked !== "boolean" ?
+                        typeof this.props.status !== "string" ?
                         null :
-                        this.props.checked ?
-                        <i
-                            className={`${cssMaterialize.materialIcon} ${css.check}`}
-                        >
-                            {"check"}
-                        </i> :
-                        <i
-                            className={`${cssMaterialize.materialIcon} ${css.deny}`}
-                        >
-                            {"clear"}
-                        </i>
+                        (
+                            this.props.status === "ready" ?
+                            <i
+                                className={`${cssMaterialize.materialIcon} ${css.check}`}
+                            >
+                                {"done_all"}
+                            </i> :
+                            (
+                                this.props.status === "pending" ?
+                                <i
+                                    className={`${cssMaterialize.materialIcon} ${css.pending}`}
+                                >
+                                    {"hourglass_empty"}
+                                </i> :
+                                <i
+                                    className={`${cssMaterialize.materialIcon} ${css.deny}`}
+                                >
+                                    {"clear"}
+                                </i>
+                            )
+                        )
                     }
                 </div>
             </div>

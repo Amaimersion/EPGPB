@@ -99,7 +99,7 @@ class App extends React.Component<Props, State> {
                                         checked: true
                                     }
                                 ]}
-                                checked={true}
+                                status={"ready"}
                             /> :
                             null
                         }
@@ -118,7 +118,7 @@ class App extends React.Component<Props, State> {
                                         checked: true
                                     }
                                 ]}
-                                checked={true}
+                                status={"ready"}
                             /> :
                             null
                         }
@@ -141,7 +141,7 @@ class App extends React.Component<Props, State> {
                                         checked: true
                                     }
                                 ]}
-                                checked={true}
+                                status={"ready"}
                             /> :
                             null
                         }
@@ -160,7 +160,7 @@ class App extends React.Component<Props, State> {
                                         checked: true
                                     }
                                 ]}
-                                checked={true}
+                                status={"ready"}
                             /> :
                             null
                         }
@@ -179,7 +179,7 @@ class App extends React.Component<Props, State> {
                                         checked: true
                                     }
                                 ]}
-                                checked={true}
+                                status={"ready"}
                             /> :
                             null
                         }
@@ -198,7 +198,7 @@ class App extends React.Component<Props, State> {
                                         checked: true
                                     }
                                 ]}
-                                checked={true}
+                                status={"ready"}
                             /> :
                             null
                         }
@@ -217,7 +217,7 @@ class App extends React.Component<Props, State> {
                                         checked: false
                                     }
                                 ]}
-                                checked={false}
+                                status={"cancel"}
                             /> :
                             null
                         }

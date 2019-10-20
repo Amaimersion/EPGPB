@@ -299,7 +299,7 @@ class App extends React.Component<Props, State> {
                         {
                             [3, 4, 5, 7].includes(accessLevel) ?
                             <Stage
-                                title={"Заявка из банка в МСП"}
+                                title={"Заявка из банка в корпорацию МСП"}
                                 items={[
                                     {
                                         title: "Отправление",

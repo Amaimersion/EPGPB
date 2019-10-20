@@ -187,12 +187,8 @@ class App extends React.Component<Props, State> {
                         {
                             [1, 3, 4, 5, 6, 7].includes(accessLevel) ?
                             <Stage
-                                title={"Добавление и подписание документов"}
+                                title={"Подписание документов"}
                                 items={[
-                                    {
-                                        title: "Добавление",
-                                        checked: false
-                                    },
                                     {
                                         title: "Подписание",
                                         checked: true
@@ -210,14 +206,14 @@ class App extends React.Component<Props, State> {
                         {
                             [1, 3, 4, 5, 6, 7].includes(accessLevel) ?
                             <Stage
-                                title={"Подписание документов"}
+                                title={"Акцептование документов"}
                                 items={[
                                     {
                                         title: "Рассмотрение",
                                         checked: true
                                     },
                                     {
-                                        title: "Подписание",
+                                        title: "Акцептование",
                                         checked: false
                                     }
                                 ]}
@@ -263,22 +259,30 @@ class App extends React.Component<Props, State> {
                         <div
                             className={`${cssMaterialize.col} ${cssMaterialize.left} ${css.buttons} ${css.padding.left}`}
                         >
-                            <div
-                                className={`${cssMaterialize.button} ${cssMaterialize.blue} ${cssMaterialize.darken3}`}
-                            >
-                                {"Загрузить документы"}
-                            </div>
+                            {
+                                [1, 3, 5].includes(accessLevel)  ?
+                                <div
+                                    className={`${cssMaterialize.button} ${cssMaterialize.blue} ${cssMaterialize.darken3}`}
+                                >
+                                    {"Загрузить документы"}
+                                </div> :
+                                null
+                            }
+
+                            {
+                                [3, 4, 5, 7].includes(accessLevel) ?
+                                    <div
+                                        className={`${cssMaterialize.button} ${cssMaterialize.blue} ${cssMaterialize.darken3}`}
+                                    >
+                                        {"Сформировать отчет"}
+                                    </div> :
+                                    null
+                            }
 
                             <div
                                 className={`${cssMaterialize.button} ${cssMaterialize.blue} ${cssMaterialize.darken3}`}
                             >
                                 {"Задать вопрос"}
-                            </div>
-
-                            <div
-                                className={`${cssMaterialize.button} ${cssMaterialize.blue} ${cssMaterialize.darken3}`}
-                            >
-                                {"Продлить время обработки"}
                             </div>
                         </div>
 
@@ -288,7 +292,15 @@ class App extends React.Component<Props, State> {
                             <div
                                 className={`${cssMaterialize.button} ${cssMaterialize.red} ${cssMaterialize.darken3}`}
                             >
-                                {"Отозвать заявку"}
+                                {
+                                    [1].includes(accessLevel) ?
+                                    "Отозвать заявку" :
+                                    (
+                                        [3, 5].includes(accessLevel) ?
+                                        "Завершить заявку" :
+                                        "Направить директиву"
+                                    )
+                                }
                             </div>
                         </div>
                     </div>

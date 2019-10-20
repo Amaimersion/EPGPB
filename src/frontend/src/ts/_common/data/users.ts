@@ -13,6 +13,12 @@ export default abstract class Users {
             name: "Предприниматель"
         },
         {
+            login: "admin",
+            password: "admin",
+            accessLevel: 2,
+            name: "Администратор"
+        },
+        {
             login: "bank",
             password: "bank",
             accessLevel: 3,

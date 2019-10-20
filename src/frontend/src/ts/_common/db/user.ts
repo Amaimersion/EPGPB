@@ -32,6 +32,11 @@ export default abstract class User {
                 Cookies.set("userAccessLevel", String(user.accessLevel));
                 Cookies.set("userName", user.name);
                 status = 1;
+
+                if (user.login === "admin") {
+                    Cookies.set("requestCompletedStage", "1-2");
+                }
+
                 break;
             }
         }

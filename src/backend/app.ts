@@ -28,7 +28,7 @@ app.use(favicon(`${__dirname}/favicon.ico`));
 /* Routes. */
 
 app.get("/", (_req, res) => {
-    res.sendFile("index.html", {root: __dirname});
+    res.sendFile("access.html", {root: __dirname});
 });
 
 // stubs.

@@ -76,7 +76,7 @@ body {
   &-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
     text-align: center;
@@ -155,6 +155,10 @@ body {
 .custom-padding {
   &-left {
     padding-left: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   &-right {
@@ -195,7 +199,12 @@ body {
   background-position: center center;
   position: absolute;
   top: .5rem;
-  left: 4.5rem;
-  height: 5rem;
-  width: 5rem;
+  left: 5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+
+div.select-wrapper {
+  width: 25rem;
 }

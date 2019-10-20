@@ -1,0 +1,15 @@
+extends ./_common/html5
+
+
+block append head
+  +css(cssLib.materialize)
+  +css("access.css")
+  +js-async(jsLib.materialize)
+  +js-defer(jsLib.react)
+  +js-defer(jsLib.reactDom)
+  +js-defer(jsLib.cookie)
+  +js-defer("access.js")
+
+
+block append main
+  main(id="root")

@@ -118,7 +118,7 @@ class App extends React.Component<Props, State> {
                                         checked: true
                                     }
                                 ]}
-                                status={"ready"}
+                                status={"pending"}
                             /> :
                             null
                         }

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import User from "../_common/db/user";
 import PageInfoCommon from "../_common/data/page-info";
 import PageInfo from "./data/page-info";
 import Stage from "./elements/stage";
@@ -14,6 +15,14 @@ class App extends React.Component<Props, State> {
     public render(): JSX.Element {
         const css = PageInfo.css;
         const cssMaterialize = PageInfoCommon.cssMaterialize;
+
+        if (!User.currentAccessLevel()) {
+            return (
+                <p>
+                    {"Пожалуйста, авторизируйтесь, чтобы просматривать эту страницу."}
+                </p>
+            );
+        }
 
         return (
             <div
@@ -220,7 +229,7 @@ class App extends React.Component<Props, State> {
                             className={`${cssMaterialize.col} ${cssMaterialize.left} ${css.buttons} ${css.padding.left}`}
                         >
                             <div
-                                className={`${cssMaterialize.buttonPulse} ${cssMaterialize.blue} ${cssMaterialize.darken3}`}
+                                className={`${cssMaterialize.button} ${cssMaterialize.blue} ${cssMaterialize.darken3}`}
                             >
                                 {"Загрузить документы"}
                             </div>

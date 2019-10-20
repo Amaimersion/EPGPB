@@ -1,0 +1,171 @@
+@import "./_common/font";
+
+
+.custom-request-container {
+  padding: .5rem 2rem;
+  margin: 0 5rem;
+  margin-top: 5rem;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+
+.custom-request-progress {
+  display: flex;
+
+  > * {
+    height: 8px;
+
+    > .determinate {
+      width: 100%;
+    }
+
+    &:nth-child(1) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      width: 77%;
+    }
+
+    &:nth-child(2) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      width: 13%;
+    }
+
+    &:nth-child(3) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      width: 10%;
+
+      > .determinate {
+        width: 0;
+      }
+    }
+  }
+}
+
+
+.custom-request-stages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+
+  > * {
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.custom-request-stage {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 7px;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  &-title {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: .15rem;
+    font-size: 1.2rem;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  &-item {
+    color: rgba(0, 0, 0, .3);
+
+    &-checked {
+      color: black;
+    }
+  }
+
+  &-check,
+  &-deny {
+    font-size: 2rem;
+    margin-top: .5rem;
+  }
+
+  &-check {
+    color: green;
+  }
+
+  &-deny {
+    color: red;
+  }
+}
+
+
+.custom-request-description {
+  &-text {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  &-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+}
+
+
+.custom-request-buttons {
+  > * {
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.custom-padding {
+  &-left {
+    padding-left: 0 !important;
+  }
+
+  &-right {
+    padding-right: 0 !important;
+  }
+}
+
+
+.custom-request-user {
+  position: absolute;
+  right: 2rem;
+  top: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  &-title {
+    margin-right: .5rem;
+    font-weight: bold;
+  }
+
+  &-icon {
+    cursor: pointer;
+  }
+}

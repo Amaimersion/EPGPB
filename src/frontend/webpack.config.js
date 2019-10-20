@@ -13,6 +13,7 @@ module.exports = {
     entry: {
         index: path.resolve(__dirname, 'src/build/index.js'),
         access: path.resolve(__dirname, 'src/build/access.js'),
+        request: path.resolve(__dirname, 'src/build/request.js'),
     },
     output: {
         path: OUTPUT_FOLDER
@@ -67,7 +68,12 @@ module.exports = {
             filename: 'access.html',
             template: path.resolve(__dirname, './src/pug/access.pug'),
             inject: false
-        })
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'request.html',
+            template: path.resolve(__dirname, './src/pug/request.pug'),
+            inject: false
+        }),
     ],
     resolve: {
         alias: {

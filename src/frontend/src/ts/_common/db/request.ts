@@ -2,12 +2,12 @@ import Cookies from "js-cookie";
 
 
 export default abstract class Request {
-    public static getCurrentStatus() {
-        return Cookies.get("requestCurrentStage");
+    public static getCompletedStage() {
+        return Cookies.get("requestCompletedStage");
     }
 
-    public static getCurrentDescription() {
-        return Cookies.get("requestCurrentStageDescription");
+    public static getStageDescription() {
+        return Cookies.get("requestStageDescription");
     }
 
     /**
@@ -61,8 +61,8 @@ export default abstract class Request {
      *  3 - отказ
      */
     public static setStage(newStage: string, newDescription: string): void {
-        Cookies.set("requestCurrentStage", newStage);
-        Cookies.set("requestCurrentStageDescription", newDescription);
+        Cookies.set("requestCompletedStage", newStage);
+        Cookies.set("requestStageDescription", newDescription);
     }
 
     public static getName() {

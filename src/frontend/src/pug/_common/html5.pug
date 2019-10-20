@@ -1,0 +1,70 @@
+block vars
+  - var title = "Портал государственной поддержки бизнеса";
+  - var cssLib = {
+  -   normalize: "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css",
+  -   materialize: "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css",
+  -   chart: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+  - };
+  - var jsLib = {
+  -   react: "https://unpkg.com/react@16/umd/react.development.js",
+  -   reactDom: "https://unpkg.com/react-dom@16/umd/react-dom.development.js",
+  -   materialize: "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js",
+  -   cookie: "https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js",
+  -   chart: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+  - };
+  - var icons = {
+  -   materialize: "https://fonts.googleapis.com/icon?family=Material+Icons"
+  - };
+
+
+block mixins
+  mixin css(href)
+    link(
+      rel="stylesheet"
+      href=href
+    )&attributes(attributes)
+
+  mixin js(src, props={})
+    script(
+      defer=props.defer
+      async=props.async
+      src=src
+    )&attributes(attributes)
+
+  mixin js-defer(src)
+    +js(
+      src,
+      {defer: true}
+    )&attributes(attributes)
+
+  mixin js-async(src)
+    +js(
+      src,
+      {async: true}
+    )&attributes(attributes)
+
+
+<!DOCTYPE html>
+
+html(
+  class=htmlClass
+  lang=htmlLang ? htmlLang : "ru"
+)
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+      meta(http-equiv="X-UA-Compatible" content="ie=edge")
+      title=title
+
+  body(
+    class=bodyClass
+  )
+    block body
+      noscript=noscriptText ? noscriptText : "Пожалуйста, включите JavaScript, чтобы просмотреть эту страницу."
+
+      block bodyStart
+      block header
+      block main
+      block footer
+      block bodyEnd

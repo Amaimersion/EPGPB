@@ -22,9 +22,6 @@
         "removeComments": true,
         "jsx": "react"
     },
-    "exclude": [
-        "src/frontend" // will be builded separately.
-    ],
     "awesomeTypescriptLoaderOptions": {
         "useCache": true,
         "useTranspileModule": true

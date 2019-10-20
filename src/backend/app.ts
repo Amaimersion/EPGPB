@@ -28,10 +28,14 @@ app.use(favicon(`${__dirname}/favicon.ico`));
 /* Routes. */
 
 app.get("/", (_req, res) => {
-    res.sendFile("index.html", {root: __dirname});
+    res.sendFile("access.html", {root: __dirname});
 });
 
 // stubs.
+
+app.get("/index.html", (_req, res) => {
+    res.sendFile("index.html", {root: __dirname});
+});
 
 app.get("/index.css", (_req, res) => {
     res.sendFile("index.css", {root: __dirname});
@@ -39,6 +43,42 @@ app.get("/index.css", (_req, res) => {
 
 app.get("/index.js", (_req, res) => {
     res.sendFile("index.js", {root: __dirname});
+});
+
+app.get("/access.html", (_req, res) => {
+    res.sendFile("access.html", {root: __dirname});
+});
+
+app.get("/access.css", (_req, res) => {
+    res.sendFile("access.css", {root: __dirname});
+});
+
+app.get("/access.js", (_req, res) => {
+    res.sendFile("access.js", {root: __dirname});
+});
+
+app.get("/request.html", (_req, res) => {
+    res.sendFile("request.html", {root: __dirname});
+});
+
+app.get("/request.css", (_req, res) => {
+    res.sendFile("request.css", {root: __dirname});
+});
+
+app.get("/request.js", (_req, res) => {
+    res.sendFile("request.js", {root: __dirname});
+});
+
+app.get("/stat.html", (_req, res) => {
+    res.sendFile("stat.html", {root: __dirname});
+});
+
+app.get("/stat.css", (_req, res) => {
+    res.sendFile("stat.css", {root: __dirname});
+});
+
+app.get("/stat.js", (_req, res) => {
+    res.sendFile("stat.js", {root: __dirname});
 });
 
 // end stubs.

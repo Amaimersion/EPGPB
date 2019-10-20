@@ -27,6 +27,11 @@
     "@types/connect" "*"
     "@types/node" "*"
 
+"@types/chart.js@^2.8.7":
+  version "2.8.7"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.8.7.tgz#66f94894becbb4a6cbea4dae508b01f5c0d261ba"
+  integrity sha512-g17rcS5R5PaxRWPJlGlL1ob1mQRSpkybtmNZTS/4dmhkNNXl0Xo0CQsjFfut0Fu5MNz4iKWKr02XI7ieeBSDtQ==
+
 "@types/compression@0.0.36":
   version "0.0.36"
   resolved "https://registry.yarnpkg.com/@types/compression/-/compression-0.0.36.tgz#7646602ffbfc43ea48a8bf0b2f1d5e5f9d75c0d0"
@@ -73,6 +78,11 @@
   integrity sha512-HYJes3rWMbLatZLH/dU4uzlvqaWFN2nIOgKmcem0Z0LJ5ILaQ2tFbRYykMLgCMXPWVsqZreskzv9ijSK+cZ1VQ==
   dependencies:
     "@types/express" "*"
+
+"@types/js-cookie@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@types/js-cookie/-/js-cookie-2.2.4.tgz#f79720b4755aa197c2e15e982e2f438f5748e348"
+  integrity sha512-WTfSE1Eauak/Nrg6cA9FgPTFvVawejsai6zXoq0QYTQ3mxONeRtGhKxa7wMlUzWWmzrmTeV+rwLjHgsCntdrsA==
 
 "@types/lusca@^1.5.0":
   version "1.6.1"
@@ -5176,10 +5186,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
-  integrity sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
+typescript@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
+  integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
 
 uglify-js@3.4.x:
   version "3.4.10"

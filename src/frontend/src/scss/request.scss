@@ -1,0 +1,210 @@
+@import "./_common/font";
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #FbFbFb;
+}
+
+
+.custom-request-container {
+  padding: .5rem 2rem;
+  margin: 0 5rem;
+  margin-top: 5rem;
+  box-sizing: border-box;
+  border-radius: 7px;
+  background-color: white;
+}
+
+
+.custom-request-progress {
+  display: flex;
+
+  > * {
+    height: 8px;
+
+    > .determinate {
+      width: 100%;
+    }
+
+    &:nth-child(1) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      width: 77%;
+    }
+
+    &:nth-child(2) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      width: 23%;
+    }
+  }
+}
+
+
+.custom-request-stages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  height: 16rem;
+
+  > * {
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.custom-request-stage {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 7px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-title {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: .15rem;
+    font-size: 1.2rem;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  &-item {
+    color: rgba(0, 0, 0, .3);
+
+    &-checked {
+      color: black;
+    }
+  }
+
+  &-check,
+  &-deny {
+    font-size: 2rem;
+    margin-top: .5rem;
+  }
+
+  &-check {
+    color: green;
+  }
+
+  &-deny {
+    color: red;
+  }
+
+  &-pending {
+    color: orange;
+  }
+}
+
+
+.custom-request-description {
+  &-text {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  &-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+}
+
+
+.custom-request-buttons {
+  > * {
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.custom-padding {
+  &-left {
+    padding-left: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  &-right {
+    padding-right: 0 !important;
+  }
+}
+
+
+.custom-request-user {
+  position: absolute;
+  right: 4.5rem;
+  top: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  &-title {
+    margin-right: .5rem;
+    font-weight: bold;
+  }
+
+  &-icon {
+    cursor: pointer;
+  }
+}
+
+
+.custom-request-stage-date-of-completition {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+
+.custom-request-logo {
+  background-image: url("https://vmasshtabe.ru/wp-content/uploads/2015/12/329155-vms-Gerb-Rossii.png");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: .5rem;
+  left: 5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+
+div.select-wrapper {
+  width: 25rem;
+}

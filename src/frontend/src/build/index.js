@@ -1,5 +1,5 @@
 import '@scss/index.scss';
-import '@ts/app.tsx';
+import '@ts/index/app.tsx';
 
 // in webpack.config.js
 //import '@pug/index.pug';

@@ -15,8 +15,9 @@ class App extends React.Component<Props, State> {
     public render(): JSX.Element {
         const css = PageInfo.css;
         const cssMaterialize = PageInfoCommon.cssMaterialize;
+        const accessLevel = User.currentAccessLevel() || 0;
 
-        if (!User.currentAccessLevel()) {
+        if (!accessLevel) {
             return (
                 <p>
                     {"Пожалуйста, авторизируйтесь, чтобы просматривать эту страницу."}
@@ -84,129 +85,160 @@ class App extends React.Component<Props, State> {
                     <div
                         className={`${cssMaterialize.row} ${css.stages}`}
                     >
-                        <Stage
-                            title={"Первичная проверка"}
-                            items={[
-                                {
-                                    title: "Заполнение",
-                                    checked: true
-                                },
-                                {
-                                    title: "Проверка",
-                                    checked: true
-                                }
-                            ]}
-                            checked={true}
-                        />
+                        {
+                            [1, 3, 4, 5, 6, 7].includes(accessLevel) ?
+                            <Stage
+                                title={"Первичная проверка"}
+                                items={[
+                                    {
+                                        title: "Заполнение",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Проверка",
+                                        checked: true
+                                    }
+                                ]}
+                                checked={true}
+                            /> :
+                            null
+                        }
 
-                        <Stage
-                            title={"Обращение в банк"}
-                            items={[
-                                {
-                                    title: "Отправление",
-                                    checked: true
-                                },
-                                {
-                                    title: "Проверка",
-                                    checked: true
-                                }
-                            ]}
-                            checked={true}
-                        />
+                        {
+                            [1, 3, 4, 7].includes(accessLevel) ?
+                            <Stage
+                                title={"Обращение в банк"}
+                                items={[
+                                    {
+                                        title: "Отправление",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Проверка",
+                                        checked: true
+                                    }
+                                ]}
+                                checked={true}
+                            /> :
+                            null
+                        }
 
-                        <Stage
-                            title={"Дополнительные документы"}
-                            items={[
-                                {
-                                    title: "Добавление",
-                                    checked: true
-                                },
-                                {
-                                    title: "Отправление",
-                                    checked: true
-                                },
-                                {
-                                    title: "Проверка",
-                                    checked: true
-                                }
-                            ]}
-                            checked={true}
-                        />
+                        {
+                            [1, 3, 4].includes(accessLevel) ?
+                            <Stage
+                                title={"Дополнительные документы"}
+                                items={[
+                                    {
+                                        title: "Добавление",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Отправление",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Проверка",
+                                        checked: true
+                                    }
+                                ]}
+                                checked={true}
+                            /> :
+                            null
+                        }
 
-                        <Stage
-                            title={"Заявка из банка в МСП"}
-                            items={[
-                                {
-                                    title: "Отправление",
-                                    checked: true
-                                },
-                                {
-                                    title: "Рассмотрение",
-                                    checked: true
-                                }
-                            ]}
-                            checked={true}
-                        />
+                        {
+                            [3, 4, 5, 7].includes(accessLevel) ?
+                            <Stage
+                                title={"Заявка из банка в МСП"}
+                                items={[
+                                    {
+                                        title: "Отправление",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Рассмотрение",
+                                        checked: true
+                                    }
+                                ]}
+                                checked={true}
+                            /> :
+                            null
+                        }
 
-                        <Stage
-                            title={"Заявка в кредитный комитет"}
-                            items={[
-                                {
-                                    title: "Отправление",
-                                    checked: true
-                                },
-                                {
-                                    title: "Рассмотрение",
-                                    checked: true
-                                }
-                            ]}
-                            checked={true}
-                        />
+                        {
+                            [3, 4, 5, 6, 7].includes(accessLevel) ?
+                            <Stage
+                                title={"Заявка в кредитный комитет"}
+                                items={[
+                                    {
+                                        title: "Отправление",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Рассмотрение",
+                                        checked: true
+                                    }
+                                ]}
+                                checked={true}
+                            /> :
+                            null
+                        }
 
-                        <Stage
-                            title={"Добавление и подписание документов"}
-                            items={[
-                                {
-                                    title: "Добавление",
-                                    checked: false
-                                },
-                                {
-                                    title: "Подписание",
-                                    checked: true
-                                },
-                                {
-                                    title: "Отправление",
-                                    checked: true
-                                }
-                            ]}
-                            checked={true}
-                        />
+                        {
+                            [1, 3, 4, 5, 6, 7].includes(accessLevel) ?
+                            <Stage
+                                title={"Добавление и подписание документов"}
+                                items={[
+                                    {
+                                        title: "Добавление",
+                                        checked: false
+                                    },
+                                    {
+                                        title: "Подписание",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Отправление",
+                                        checked: true
+                                    }
+                                ]}
+                                checked={true}
+                            /> :
+                            null
+                        }
 
-                        <Stage
-                            title={"Подписание документов"}
-                            items={[
-                                {
-                                    title: "Рассмотрение",
-                                    checked: true
-                                },
-                                {
-                                    title: "Подписание",
-                                    checked: false
-                                }
-                            ]}
-                            checked={false}
-                        />
+                        {
+                            [1, 3, 4, 5, 6, 7].includes(accessLevel) ?
+                            <Stage
+                                title={"Подписание документов"}
+                                items={[
+                                    {
+                                        title: "Рассмотрение",
+                                        checked: true
+                                    },
+                                    {
+                                        title: "Подписание",
+                                        checked: false
+                                    }
+                                ]}
+                                checked={false}
+                            /> :
+                            null
+                        }
 
-                        <Stage
-                            title={"Получение средств"}
-                            items={[
-                                {
-                                    title: "Ожидание",
-                                    checked: false
-                                }
-                            ]}
-                        />
-
+                        {
+                            [1, 3, 4, 5, 6, 7].includes(accessLevel) ?
+                            <Stage
+                                title={"Получение средств"}
+                                items={[
+                                    {
+                                        title: "Ожидание",
+                                        checked: false
+                                    }
+                                ]}
+                            /> :
+                            null
+                        }
                     </div>
 
                     <div

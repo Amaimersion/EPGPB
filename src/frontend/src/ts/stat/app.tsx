@@ -178,7 +178,7 @@ class App extends React.Component<Props, State> {
     }
 
     protected async getData(id: number) {
-        const response = await fetch(`http://89.108.103.180:5000/get/myChart${id}`);
+        const response = await fetch(`https://kvmru01-17637.fornex.org:5000/api/myChart${id}`);
 
         if (!response.ok) {
             throw new Error("not ok");
